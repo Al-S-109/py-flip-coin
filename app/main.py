@@ -8,12 +8,12 @@ import matplotlib.pyplot as plt
 def flip_coin() -> dict:
     coin_dict = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0,
                  6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
-    coin_sides = ["up", "down"]
+    coin_sides = [0, 1]
     for _ in range(10000):
         count = 0
         for _ in range(10):
             side = random.choice(coin_sides)
-            if side == "up":
+            if side == 0:
                 count += 1
         coin_dict[count] += 1
 
